@@ -7,6 +7,11 @@ import { CommentaireComponent } from './commentaire/commentaire.component';
 import { PosterComponent } from './poster/poster.component';
 import { UserComponent } from './user/user.component';
 import { MenuComponent } from './menu/menu.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataTablesModule } from 'angular-datatables';
+import { EditPostComponent } from './edit-post/edit-post.component';
+import { AjoutPostComponent } from './ajout-post/ajout-post.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -14,11 +19,16 @@ import { MenuComponent } from './menu/menu.component';
     CommentaireComponent,
     PosterComponent,
     UserComponent,
-    MenuComponent
+    MenuComponent,
+    EditPostComponent,
+    AjoutPostComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    DataTablesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
