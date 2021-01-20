@@ -1,0 +1,30 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Info ",
+      "body": "je suis la qui m'aime",
+      "userId": "1"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "name": "testtdtdtd",
+      "username": "dialllo",
+      "email": "ttstttdtgggg",
+      "address": {
+       "city": "grand dakar"
+      }
+        ,
+      "phone": "tsttttttttttttt"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "name": "dialloo",
+      "body": "jkddjkdjkdjkdjkdjkdjfjfjfjfjkfjkjkffffffffffffffffffffffffff"
+    }
+  ]
+}

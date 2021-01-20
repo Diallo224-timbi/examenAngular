@@ -1,0 +1,64 @@
+<form [formGroup]="form" (ngSubmit)="save()">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">NAME</label>
+      <input type="text" formControlName="name" class="form-control" id="exampleFormControlInput1" placeholder="ex: diallo maouloudou">
+      <div *ngIf="isValidInput('name')" class="alert alert-danger">
+        <div>  name must 5 character </div>
+      </div>
+    </div>
+    <div class="form-group">
+        <label for="exampleFormControlTextarea1">USER NAME</label>
+        <input class="form-control" formControlName="username" id="exampleFormControlTextarea1" >
+        <div *ngIf="isValidInput('username')" class="alert alert-danger">
+            <div> the user name must 5 character </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">ADDRESS EMAIL</label>
+        <input class="form-control" formControlName="email" id="exampleFormControlTextarea1" >
+        <div *ngIf="isValidInput('email')" class="alert alert-danger">
+            <div> the email must 10 character </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">ADRESSE</label>
+        <input class="form-control" formControlName="address" id="exampleFormControlTextarea1" >
+        <div *ngIf="isValidInput('address')" class="alert alert-danger">
+            <div> the address must 5 character </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="exampleFormControlTextarea1">PHONE NUMBER</label>
+        <input class="form-control" formControlName="phone" id="exampleFormControlTextarea1" >
+        <div *ngIf="isValidInput('phone')" class="alert alert-danger">
+            <div> the phone number must 5 character </div>
+        </div>
+      </div>
+    <div class="form-group">
+      <button class="btn btn-primary" [disabled]="form.invalid" submit >{{button}}</button>
+    </div>
+  </form>
+ <div>
+  <fieldset *ngIf="button=='EDIT'"><legend>POST OF THE USER</legend>
+    <div class="container">
+      <div class="row">
+        <table class="table table-striped table-hover">
+          <thead>
+            <tr>
+              <th>id</th>
+              <th>TITRE</th>
+              <th>BODY</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let post of posts">
+              <td>{{post.id}}</td>
+              <td>{{post.title}}</td>
+              <td>{{post.body}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </fieldset>
+ </div>
